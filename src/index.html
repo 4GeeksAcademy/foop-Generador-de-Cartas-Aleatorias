@@ -1,38 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic: The Gathering - Simulación</title>
-    <link rel="stylesheet" href="style.css">
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="game-container">
-        <h1>Magic: The Gathering</h1>
-        <div class="player-area">
-            <div class="deck-area">
-                <div class="card-back" id="deck"></div>
-                <button id="drawCardButton">Robar Carta</button>
-            </div>
-            <div class="hand-area" id="playerHand">
-                <h2>Tu Mano</h2>
-                </div>
-            <div class="play-area" id="playArea">
-                <h2>Campo de Batalla</h2>
-                </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic: The Gathering - Simulación</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Write your HTML code here, you can delete everything withing the body tags -->
+  <div class="card" id="randomCard">
+    <span class="suit" id="topSuit"></span>
+    <span class="value" id="cardValue"></span>
+    <span class="suit" id="bottomSuit"></span>
+  </div>
+
+  <div class="controls">
+    <button id="newCardBtn">Generar Nueva Carta</button>
+
+    <div class="input-group">
+      <label for="cardWidth">Ancho (px):</label>
+      <input type="number" id="cardWidth" placeholder="300">
     </div>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+    <div class="input-group">
+      <label for="cardHeight">Alto (px):</label>
+      <input type="number" id="cardHeight" placeholder="450">
+    </div>
+  </div>
+
+  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <script type="module" src="app.js"></script>
+</body>
+
 </html>
